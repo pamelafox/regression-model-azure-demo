@@ -1,0 +1,3 @@
+azure-functions
+joblib
+numpy
