@@ -1,7 +1,0 @@
-{
-  "IsEncrypted": false,
-  "Values": {
-    "FUNCTIONS_WORKER_RUNTIME": "python",
-    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=pamelassalarymodel;AccountKey=Omuiu7pQQmtfjtT7TcBeuC52x0vUkPd9pH8R/Su1HhjoALQlHnFmbz4/abILjIbOn/QJ3+ljLIWP+ASt+XKMgg==;EndpointSuffix=core.windows.net"
-  }
-}
