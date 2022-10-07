@@ -1,3 +1,4 @@
 azure-functions
 joblib
 numpy
+scikit-learn
