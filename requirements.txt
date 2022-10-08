@@ -2,3 +2,5 @@ azure-functions
 joblib
 numpy
 scikit-learn
+fastapi
+nest_asyncio

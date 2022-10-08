@@ -7,3 +7,5 @@ isort
 black
 pyflakes
 matplotlib
+requests
+pytest
