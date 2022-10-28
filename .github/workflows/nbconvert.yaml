@@ -1,17 +1,28 @@
-name: Convert slides
+name: Update notebook slides
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  push
 
 jobs:
-  build:
+  notebook_update:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: nbconvert .ipynb's
-      uses: runsascoded/nbconvert@v1.2
-      with:
-        args: -f -x -o slides
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip -r requirements.txt
+      - name: Update analysis notebook
+        run: |
+          python -m pip install jupyter nbconvert nbformat
+          jupyter nbconvert --to slides --execute explorer.ipynb --ExecutePreprocessor.kernel_name='python3'
+      - name: commit updated notebook
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: Plot update bot
+          message: "Update Notebook slides"
+          add: "explorer.html"
