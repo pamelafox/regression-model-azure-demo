@@ -5,13 +5,16 @@ import fastapi
 import joblib
 import nest_asyncio
 import numpy
-import sklearn
-from pydantic import BaseModel
 
 app = fastapi.FastAPI()
 
 nest_asyncio.apply()
 
+# import enums
+
+# todo: categorical transformer?
+# or I could just do a smarter version of what I originally did
+# as
 
 class EducationLevel(str, Enum):
     MS = "Master’s degree (M.A., M.S., M.Eng., MBA, etc.)"
@@ -200,6 +203,9 @@ async def model_predict(
     country: Country,
 ):
     loaded_model = joblib.load("function/yearly-comp.pkl")
+    # TODO: is there metadata in the model? get params?
+    # could perhaps dynamically create enums based on the loaded model?
+
     X_new = numpy.array(
         [
             [
