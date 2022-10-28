@@ -25,4 +25,4 @@ jobs:
         with:
           author_name: Plot update bot
           message: "Update Notebook slides"
-          add: "explorer.html"
+          add: "explorer.slides.html"
