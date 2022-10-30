@@ -1,3 +1,4 @@
+# Based on https://innerjoin.bit.io/automate-jupyter-notebooks-on-github-9d988ecf96a6
 name: Update notebook slides
 
 on:
