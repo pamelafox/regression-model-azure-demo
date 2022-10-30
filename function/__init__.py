@@ -8,7 +8,7 @@ import categories
 
 app = fastapi.FastAPI()
 nest_asyncio.apply()
-model = joblib.load("function/yearly-comp.pkl")
+model = joblib.load("function/model.pkl")
 
 @app.get("/model_predict")
 async def model_predict(
