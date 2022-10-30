@@ -20,10 +20,10 @@ jobs:
       - name: Update analysis notebook
         run: |
           python -m pip install jupyter nbconvert nbformat
-          jupyter nbconvert --to slides --execute explorer.ipynb --ExecutePreprocessor.kernel_name='python3'
+          jupyter nbconvert --to slides --execute notebook/explorer.ipynb --ExecutePreprocessor.kernel_name='python3'
       - name: commit updated notebook
         uses: EndBug/add-and-commit@v7
         with:
           author_name: Plot update bot
           message: "Update Notebook slides"
-          add: "explorer.slides.html"
+          add: "notebook/explorer.slides.html"
