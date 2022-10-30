@@ -62,6 +62,9 @@ resource hostingPlan 'Microsoft.Web/serverfarms@2020-10-01' = {
 resource functionApp 'Microsoft.Web/sites@2020-06-01' = {
   name: '${prefix}-function-app'
   location: location
+  tags: union(tags, {
+    'azd-service-name': 'api'
+   })
   kind: 'functionapp,linux'
   properties: {
     httpsOnly: true
