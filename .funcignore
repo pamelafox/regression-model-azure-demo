@@ -1,2 +1,7 @@
 .venv/
-data/
+.devcontainer/
+.github/
+.ipynb_checkpoints/
+.pytest_cache/
+.vscode/
+notebook/
