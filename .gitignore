@@ -3,3 +3,4 @@ __pycache__/
 .python_packages
 .ipynb_checkpoints/
 .DS_Store
+.azure
