@@ -4,7 +4,7 @@ import joblib
 import nest_asyncio
 import numpy
 
-import categories
+from . import categories
 
 app = fastapi.FastAPI()
 nest_asyncio.apply()
