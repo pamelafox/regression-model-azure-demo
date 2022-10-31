@@ -11,8 +11,8 @@ def test_model_predict():
         params={
             "years_coding": 8,
             "years_coding_pro": 6,
-            "education_level": "Bachelor’s degree (B.A., B.S., B.Eng., etc.)",
-            "developer_status": "I am a developer by profession",
+            "ed_level": "Bachelor’s degree (B.A., B.S., B.Eng., etc.)",
+            "dev_status": "I am a developer by profession",
             "country": "United States of America",
         },
     )
