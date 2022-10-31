@@ -1,11 +1,5 @@
 -r requirements.txt
-pandas
-numpy
-scikit-learn
-joblib
 isort
 black
 pyflakes
-matplotlib
-requests
 pytest

@@ -1,3 +1,5 @@
+import os
+
 import azure.functions
 import fastapi
 import joblib
@@ -8,7 +10,7 @@ from . import categories
 
 app = fastapi.FastAPI()
 nest_asyncio.apply()
-model = joblib.load("function/model.pkl")
+model = joblib.load(f"{os.path.dirname(os.path.realpath(__file__))}/model.pkl")
 
 @app.get("/model_predict")
 async def model_predict(

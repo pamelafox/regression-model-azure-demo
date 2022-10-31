@@ -1,0 +1,5 @@
+azure-functions
+joblib
+fastapi
+nest_asyncio
+scikit-learn

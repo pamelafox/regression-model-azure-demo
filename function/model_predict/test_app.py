@@ -17,4 +17,4 @@ def test_model_predict():
         },
     )
     assert response.status_code == 200
-    assert response.json() == {"salary": 135877.97}
+    assert response.json() == {"salary": 135944.71}
