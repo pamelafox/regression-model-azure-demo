@@ -14,6 +14,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: none;
+    margin: 1em 0;
 }
 
 .reveal pre code {
