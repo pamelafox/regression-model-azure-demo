@@ -37,7 +37,14 @@ To deploy the code, download the `azd` CLI and run:
 azd up
 ```
 
-It will prompt you to login and to provide a name (like "salary-model") and location (like "centralus").
+It will prompt you to login and to provide a name (like "salary-model") and location (like "centralus"). Then it will provision the resources in your account (if they don't yet exist) and deploy the latest code.
+
+When you've made any changes to the function, you can just run:
+
+```shell
+azd deploy
+```
+
 
 ## Feedback!?
 
