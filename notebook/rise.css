@@ -25,6 +25,9 @@
     font-size: 300%;
 }
 
-.reveal div.jp-OutputArea-output > pre {
-    font-size: 0.55em;
+:root {
+    --jp-ui-font-size1: 14px;       /* instead of 14px */
+    --jp-content-font-size1: 16px;  /* instead of 14px */
+    --jp-code-font-size: 16px;      /* instead of 13px */
+    --jp-cell-prompt-width: 64px;  /* instead of 64px */
 }
