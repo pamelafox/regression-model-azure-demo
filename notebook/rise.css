@@ -12,6 +12,11 @@
     max-height: 650px;
 }
 
+.reveal .slides .stack pre code.language-python, .reveal .slides .stack pre code.language-shell {
+    font-size: 70%;
+    line-height: 1.3em;
+}
+
 .reveal .slides .stack  h1, .reveal .slides .stack h2, .reveal .slides .stack h3 {
     color: #0072c1;
 }
