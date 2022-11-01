@@ -24,3 +24,7 @@
 .reveal .slides .stack h1 {
     font-size: 300%;
 }
+
+.reveal div.jp-OutputArea-output > pre {
+    font-size: 0.55em;
+}
