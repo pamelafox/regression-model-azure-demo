@@ -55,9 +55,9 @@ Steps for deployment:
 
 6. When you've made any changes to the app code, you can just run:
 
-```shell
-azd deploy
-```
+    ```shell
+    azd deploy
+    ```
 
 ## Feedback!?
 
