@@ -23,7 +23,7 @@ The `function` folder contains the code necessary to turn the pickled regression
 
 ## Deployment
 
-The function can be deployed using the [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/overview?WT.mc_id=python-79071-pamelafox). The `azd` CLI uses these files:
+The function can be deployed using the [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/overview). The `azd` CLI uses these files:
 
 * `infra`:
   * `main.bicep`: Creates an Azure resource group and passes parameters to `resources.bicep`
@@ -31,24 +31,37 @@ The function can be deployed using the [Azure Developer CLI](https://learn.micro
   * `main.parameters.json`: Describes parameters needed for `main.bicep`
 * `azure.yaml`: Describes which code to upload to the Function App
 
-To deploy the code, download the `azd` CLI and run:
+Steps for deployment:
 
-```shell
-azd up
-```
+1. Sign up for a [free Azure account](https://azure.microsoft.com/free/)
+2. Install the [Azure Dev CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd).
+3. Initialize a new `azd` environment:
 
-It will prompt you to login and to provide a name (like "salary-model") and location (like "centralus"). Then it will provision the resources in your account (if they don't yet exist) and deploy the latest code.
+    ```shell
+    azd init
+    ```
 
-When you've made any changes to the function, you can just run:
+    It will prompt you to provide a name (like "modelfunc") that will later be used in the name of the deployed resources.
+
+4. Provision and deploy all the resources:
+
+    ```shell
+    azd up
+    ```
+
+    It will prompt you to login, pick a subscription, and provide a location (like "eastus"). Then it will provision the resources in your account and deploy the latest code.
+
+5. When `azd` has finished deploying, you'll see an endpoint URI in the command output. 
+
+6. When you've made any changes to the app code, you can just run:
 
 ```shell
 azd deploy
 ```
 
-
 ## Feedback!?
 
-If you have any issues going through this repository, you can use the discussions tab on this repo or tweet at @pamelafox.
+If you have any issues going through this repository, you can use the *Discussions* tab on this repo.
 
 
 
