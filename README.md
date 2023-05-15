@@ -23,7 +23,7 @@ The `function` folder contains the code necessary to turn the pickled regression
 
 ## Deployment
 
-The function can be deployed using the [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/overview). The `azd` CLI uses these files:
+The function can be deployed using the [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/overview). The `azd` CLI uses these files:
 
 * `infra`:
   * `main.bicep`: Creates an Azure resource group and passes parameters to `resources.bicep`
@@ -47,18 +47,19 @@ Deployment steps:
     azd up
     ```
 
-    It will prompt you to provide an `azd` environment name (like "django-app"), select a subscription from your Azure account, and select a location (like "eastus"). Then it will provision the resources in your account and deploy the latest code. 
+    It will prompt you to provide an `azd` environment name (like "modelfunc"), select a subscription from your Azure account, and select a location (like "eastus"). Then it will provision the resources in your account and deploy the latest code.
 
-5. When you've made any changes to the function, you can just run:
+5. When `azd` has finished deploying, you'll see an endpoint URI in the command output. 
 
-  ```shell
-  azd deploy
-  ```
+6. When you've made any changes to the app code, you can just run:
 
+    ```shell
+    azd deploy
+    ```
 
 ## Feedback!?
 
-If you have any issues going through this repository, you can use the discussions tab on this repo or tweet at @pamelafox.
+If you have any issues going through this repository, you can use the *Discussions* tab on this repo.
 
 
 
