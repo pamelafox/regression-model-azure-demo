@@ -23,7 +23,7 @@ The `function` folder contains the code necessary to turn the pickled regression
 
 ## Deployment
 
-The function can be deployed using the [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/overview?WT.mc_id=python-79071-pamelafox). The `azd` CLI uses these files:
+The function can be deployed using the [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/overview). The `azd` CLI uses these files:
 
 * `infra`:
   * `main.bicep`: Creates an Azure resource group and passes parameters to `resources.bicep`
@@ -31,19 +31,29 @@ The function can be deployed using the [Azure Developer CLI](https://learn.micro
   * `main.parameters.json`: Describes parameters needed for `main.bicep`
 * `azure.yaml`: Describes which code to upload to the Function App
 
-To deploy the code, download the `azd` CLI and run:
+Deployment steps:
 
-```shell
-azd up
-```
+1. Sign up for a [free Azure account](https://azure.microsoft.com/free/) and create an Azure Subscription.
+2. Install the [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd). (If you open this repository in Codespaces or with the VS Code Dev Containers extension, that part will be done for you.)
+3. Login to Azure:
 
-It will prompt you to login and to provide a name (like "salary-model") and location (like "centralus"). Then it will provision the resources in your account (if they don't yet exist) and deploy the latest code.
+    ```shell
+    azd auth login
+    ```
 
-When you've made any changes to the function, you can just run:
+4. Provision and deploy all the resources:
 
-```shell
-azd deploy
-```
+    ```shell
+    azd up
+    ```
+
+    It will prompt you to provide an `azd` environment name (like "django-app"), select a subscription from your Azure account, and select a location (like "eastus"). Then it will provision the resources in your account and deploy the latest code. 
+
+5. When you've made any changes to the function, you can just run:
+
+  ```shell
+  azd deploy
+  ```
 
 
 ## Feedback!?
