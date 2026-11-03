@@ -71,7 +71,7 @@ resource functionApp 'Microsoft.Web/sites@2020-06-01' = {
     serverFarmId: hostingPlan.id
     clientAffinityEnabled: false
     siteConfig: {
-      linuxFxVersion: 'Python|3.9'
+      linuxFxVersion: 'Python|3.11'
       appSettings: [
         {
            name: 'APPINSIGHTS_INSTRUMENTATIONKEY'
